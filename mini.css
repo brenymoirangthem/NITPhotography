@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main_box {
+    background-image: url("photo.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+/* Menu open button */
+.btn_one {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn_one:hover {
+    font-size: 40px;
+}
+
+/* Sidebar */
+.sidebar_menu {
+    position: absolute;
+    height: 100vh;
+    left: -300px;   /* hidden initially */
+    width: 300px;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+/* Logo */
+.sidebar_menu .logo {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar_menu .logo a {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+/* Close button */
+.sidebar_menu .btn_two {
+    color: white;
+    font-size: 30px;
+    line-height: 60px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Menu list */
+.sidebar_menu .menu {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+
+.sidebar_menu .menu li {
+    margin-top: 6px;
+    padding: 4px 20px;
+    list-style: none;
+}
+
+.sidebar_menu .menu li:hover {
+    box-shadow: 2px 2px 20px red;
+}
+
+.sidebar_menu .menu i,
+.sidebar_menu .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Social media icons */
+.sidebar_menu .social_media {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar_menu .social_media ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar_menu .social_media ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.sidebar_menu .social_media ul li a {
+    color: white;
+    opacity: 0.8;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar_menu .social_media ul li a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Toggle logic */
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+#check:checked ~ .btn_one i {
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1;
+}
+#check{
+ display: none;
+}
+.btn_one label{
+    cursor: pointer;
+}
+.sidebar_menu .btn_two label{
+    cursor: pointer;
+}
